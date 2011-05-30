@@ -5,12 +5,13 @@
     REDIS_ROOT_BIN="/opt/redis/bin/redis-server"
     REDIS_BIN="/usr/bin/redis-server"
     REDIS_CONF_ROOT="/etc/redis"
+    REDIS_DATA_ROOT="/data/redis/"
     [[ -z "$VERSION" ]] && VERSION=2.2.8
 
     echo "Setup Redis $VERSION"
 
 # Create the Redis directory structure if it doesn't already exist.
-    mkdir -p "$REDIS_ROOT/versions" "$REDIS_ROOT/bin" "$REDIS_CONF_ROOT"
+    mkdir -p "$REDIS_ROOT/versions" "$REDIS_ROOT/bin" "$REDIS_CONF_ROOT" "$REDIS_DATA_ROOT"
 
 # If the requested version of Redis is already installed, remove it first.
 
@@ -33,5 +34,6 @@
     sudo /sbin/chkconfig --add redis-server
     sudo /sbin/chkconfig --level 345 redis-server on
     sudo /sbin/service redis-server start
-    echo "OK!!"
+
+    echo "Redis $VERSION OK!!"
 

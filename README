@@ -1,1 +1,3 @@
 服务器配置脚本
+安装 redis
+curl https://github.com/Psli/coo/raw/master/install_redis.sh | sh

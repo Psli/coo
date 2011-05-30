@@ -13,7 +13,7 @@
 . /etc/rc.d/init.d/functions
 
 # Source networking configuration.
-. /etc/sysconfig/network
+[ -f /etc/sysconfig/network ] && . /etc/sysconfig/network
 
 # Check that networking is up.
 [ "$NETWORKING" = "no" ] && exit 0
