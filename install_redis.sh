@@ -28,8 +28,8 @@
     ln -s "$REDIS_ROOT_BIN" "$REDIS_BIN"
 
     curl -L https://raw.github.com/Psli/coo/master/redis.conf > "$REDIS_CONF_ROOT/redis.conf"
-    curl -L https://raw.github.com/Psli/coo/master/redis_server > /etc/init.d/redis_server
-    chmod u+x /etc/init.d/redis_server
+    curl -L https://raw.github.com/Psli/coo/master/redis_server > /etc/init.d/redis-server
+    chmod u+x /etc/init.d/redis-server
 
     sudo /sbin/chkconfig --add redis-server
     sudo /sbin/chkconfig --level 345 redis-server on
