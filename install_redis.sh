@@ -6,7 +6,7 @@
     REDIS_BIN="/usr/bin/redis-server"
     REDIS_CONF_ROOT="/etc/redis"
     REDIS_DATA_ROOT="/data/redis/"
-    [[ -z "$VERSION" ]] && VERSION=2.2.8
+    [[ -z "$VERSION" ]] && VERSION=2.2.15
 
     echo "Setup Redis $VERSION"
 
